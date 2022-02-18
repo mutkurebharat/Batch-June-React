@@ -12,6 +12,8 @@ import "./App.css";
 import FormHandle from "./Form_Handling/FormHandle";
 import MountingLifecycleA from "./Lefecycle_Methods/Mounting/LifeCycleA"; // Mounting
 import UpdatingLifecycleA from "./Lefecycle_Methods/Updating/LifeCycleA"; // Updating
+import Fragment from "./Fragments/Fragment";
+import Table from "./Fragments/Table";
 function App() {
   return (
     <div className="App">
@@ -40,13 +42,14 @@ function App() {
       {/* -------------------------------- Form Handling ------------------------------------------- */}
       {/* <FormHandle /> */}
       {/* --------------------- Lifecycle Methods ---------------------------------- */}
-
       {/* -------------------- Mounting -------------------- */}
       {/* <MountingLifecycleA /> */}
-
       {/* -------------------- Updating -------------------- */}
+      {/* <UpdatingLifecycleA /> */}
+      {/* ---------------- Fragment --------------------------------------- */}
 
-      <UpdatingLifecycleA />
+      {/* <Fragment /> */}
+      <Table />
     </div>
   );
 }
