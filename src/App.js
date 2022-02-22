@@ -14,6 +14,9 @@ import MountingLifecycleA from "./Lefecycle_Methods/Mounting/LifeCycleA"; // Mou
 import UpdatingLifecycleA from "./Lefecycle_Methods/Updating/LifeCycleA"; // Updating
 import Fragment from "./Fragments/Fragment";
 import Table from "./Fragments/Table";
+import Parent_Component from "./PureComponent/ParentComponent";
+import ParentMemo from "./Memo/ParentComp";
+import Refs from "./Refs/Refs";
 function App() {
   return (
     <div className="App">
@@ -49,7 +52,17 @@ function App() {
       {/* ---------------- Fragment --------------------------------------- */}
 
       {/* <Fragment /> */}
-      <Table />
+      {/* <Table /> */}
+
+      {/* ----------------------- PureComponent ---------------------------------------- */}
+
+      {/* <Parent_Component /> */}
+
+      {/* ----------------------- Memo ---------------------------------------- */}
+      {/* <ParentMemo /> */}
+
+      {/* ------------------------------- Refs --------------------------------------------- */}
+      <Refs />
     </div>
   );
 }
