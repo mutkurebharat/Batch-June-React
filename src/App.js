@@ -1,3 +1,5 @@
+import { Component } from "react";
+
 import ClassComponent from "./Components/ClassComponent";
 import Counter from "./Components/Counter";
 import Auth from "./ConditionalRendering/ConditionalRendering";
@@ -21,54 +23,112 @@ import ParentInput from "./Refs/ParentInput";
 
 import ForwardRefParent from "./Refs/ForwadingRefs/ParentInput";
 import Portal from "./ReactPortal/Portal";
-function App() {
-  return (
-    <div className="App">
-      {/* <h1>Created From the Scratch</h1>
+import Name from "./ErrorBoundry/Name";
+import ErrorBoundry from "./ErrorBoundry/ErrorBoundry";
+import ClickCounter from "./HOC/ClickCounter";
+import HoverCounter from "./HOC/HoverCounter";
+import RenderClickCounter from "./RenderProp/RenderClickCounter";
+import RenderHoverCounter from "./RenderProp/RenderHoverCounter";
+import Admin from "./RenderProp/Admin";
+import RenderCounter from "./RenderProp/RenderCounter";
+// function App() {
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        {/* <h1>Created From the Scratch</h1>
       <h2>HEading 2</h2> */}
-      {/* <FirstComponent />
+        {/* <FirstComponent />
       <FirstComponent />
       <FirstComponent />
       <FirstComponent />
       <FirstComponent /> */}
-      {/* <ClassComponent /> */}
-      {/* <Counter /> */}
-      {/* ----------------------Event Handling --------------------- */}
-      {/* <FunctionClick />
+        {/* <ClassComponent /> */}
+        {/* <Counter /> */}
+        {/* ----------------------Event Handling --------------------- */}
+        {/* <FunctionClick />
       <ClassClick /> */}
-      {/* ----------------------------------Method As a Props------------------------ */}
-      {/* <ParentComponent /> */}
-      {/* ------------------------- Conditional Rendering --------------------------- */}
-      {/* <Auth /> */}
-      {/* ----------------------- List Rendering ---------------------------------------- */}
-      {/* <List /> */}
-      {/* -------------------------------- Styling -------------------------------------------- */}
-      {/* <Style primary={false} /> */}
-      {/* <Style /> */}
-      {/* <InlineStyle /> */}
-      {/* -------------------------------- Form Handling ------------------------------------------- */}
-      {/* <FormHandle /> */}
-      {/* --------------------- Lifecycle Methods ---------------------------------- */}
-      {/* -------------------- Mounting -------------------- */}
-      {/* <MountingLifecycleA /> */}
-      {/* -------------------- Updating -------------------- */}
-      {/* <UpdatingLifecycleA /> */}
-      {/* ---------------- Fragment --------------------------------------- */}
-      {/* <Fragment /> */}
-      {/* <Table /> */}
-      {/* ----------------------- PureComponent ---------------------------------------- */}
-      {/* <Parent_Component /> */}
-      {/* ----------------------- Memo ---------------------------------------- */}
-      {/* <ParentMemo /> */}
-      {/* ------------------------------- Refs --------------------------------------------- */}
-      {/* <Refs /> */}
-      {/* <ParentInput /> */}
-      {/* --------- Forwading REf ------------------------------- */}
-      {/* <ForwardRefParent /> */}
-      {/* ---------------- React Portal ------------------------------ */}
-      <Portal />
-    </div>
-  );
+        {/* ----------------------------------Method As a Props------------------------ */}
+        {/* <ParentComponent /> */}
+        {/* ------------------------- Conditional Rendering --------------------------- */}
+        {/* <Auth /> */}
+        {/* ----------------------- List Rendering ---------------------------------------- */}
+        {/* <List /> */}
+        {/* -------------------------------- Styling -------------------------------------------- */}
+        {/* <Style primary={false} /> */}
+        {/* <Style /> */}
+        {/* <InlineStyle /> */}
+        {/* -------------------------------- Form Handling ------------------------------------------- */}
+        {/* <FormHandle /> */}
+        {/* --------------------- Lifecycle Methods ---------------------------------- */}
+        {/* -------------------- Mounting -------------------- */}
+        {/* <MountingLifecycleA /> */}
+        {/* -------------------- Updating -------------------- */}
+        {/* <UpdatingLifecycleA /> */}
+        {/* ---------------- Fragment --------------------------------------- */}
+        {/* <Fragment /> */}
+        {/* <Table /> */}
+        {/* ----------------------- PureComponent ---------------------------------------- */}
+        {/* <Parent_Component /> */}
+        {/* ----------------------- Memo ---------------------------------------- */}
+        {/* <ParentMemo /> */}
+        {/* ------------------------------- Refs --------------------------------------------- */}
+        {/* <Refs /> */}
+        {/* <ParentInput /> */}
+        {/* --------- Forwading REf ------------------------------- */}
+        {/* <ForwardRefParent /> */}
+        {/* ---------------- React Portal ------------------------------ */}
+        {/* <Portal /> */}
+
+        {/* ------------------- Error Boundry ----------------------------- */}
+
+        {/* <ErrorBoundry>
+        <Name name="A" />
+      </ErrorBoundry>
+      <ErrorBoundry>
+        <Name name="B" />
+      </ErrorBoundry>
+      <ErrorBoundry>
+        <Name name="C" />
+      </ErrorBoundry> */}
+
+        {/* ------------------------- Higher Order Component --------------------- */}
+
+        {/* <ClickCounter name={"A"}/>
+        <HoverCounter /> */}
+
+        {/* ---------------------- Render Props -------------------------------- */}
+        {/* <RenderClickCounter />
+        <RenderHoverCounter /> */}
+        {/* <Admin name="A"/> */}
+        {/* <Admin name={(flag) => (flag ? "Admin" : "Guest")} /> */}
+
+        {/* <RenderCounter
+          render={(count, incrementCount) => (
+            <RenderClickCounter count={count} incrementCount={incrementCount} />
+          )}
+        /> */}
+
+        {/* <RenderCounter
+          render={(count, incrementCount) => (
+            <RenderHoverCounter count={count} incrementCount={incrementCount} />
+          )}
+        /> */}
+
+        <RenderCounter>
+          {(count, incrementCount) => (
+            <RenderClickCounter count={count} incrementCount={incrementCount} />
+          )}
+        </RenderCounter>
+
+        <RenderCounter>
+          {(count, incrementCount) => (
+            <RenderHoverCounter count={count} incrementCount={incrementCount} />
+          )}
+        </RenderCounter>
+      </div>
+    );
+  }
 }
 
 export default App;

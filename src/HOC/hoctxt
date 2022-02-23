@@ -1,0 +1,6 @@
+HOC - TO share the common code between the components.
+
+
+cont NewComponent = HigherOrderComp(OrignalCOmponent)
+
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
