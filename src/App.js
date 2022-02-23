@@ -17,6 +17,10 @@ import Table from "./Fragments/Table";
 import Parent_Component from "./PureComponent/ParentComponent";
 import ParentMemo from "./Memo/ParentComp";
 import Refs from "./Refs/Refs";
+import ParentInput from "./Refs/ParentInput";
+
+import ForwardRefParent from "./Refs/ForwadingRefs/ParentInput";
+import Portal from "./ReactPortal/Portal";
 function App() {
   return (
     <div className="App">
@@ -50,19 +54,19 @@ function App() {
       {/* -------------------- Updating -------------------- */}
       {/* <UpdatingLifecycleA /> */}
       {/* ---------------- Fragment --------------------------------------- */}
-
       {/* <Fragment /> */}
       {/* <Table /> */}
-
       {/* ----------------------- PureComponent ---------------------------------------- */}
-
       {/* <Parent_Component /> */}
-
       {/* ----------------------- Memo ---------------------------------------- */}
       {/* <ParentMemo /> */}
-
       {/* ------------------------------- Refs --------------------------------------------- */}
-      <Refs />
+      {/* <Refs /> */}
+      {/* <ParentInput /> */}
+      {/* --------- Forwading REf ------------------------------- */}
+      {/* <ForwardRefParent /> */}
+      {/* ---------------- React Portal ------------------------------ */}
+      <Portal />
     </div>
   );
 }
