@@ -31,6 +31,9 @@ import RenderClickCounter from "./RenderProp/RenderClickCounter";
 import RenderHoverCounter from "./RenderProp/RenderHoverCounter";
 import Admin from "./RenderProp/Admin";
 import RenderCounter from "./RenderProp/RenderCounter";
+import ComponentC from "./ContextAPI/ComponentC";
+import { UserProvider } from "./ContextAPI/context";
+import Product from "./ApiRequest/product";
 // function App() {
 class App extends Component {
   render() {
@@ -115,7 +118,7 @@ class App extends Component {
           )}
         /> */}
 
-        <RenderCounter>
+        {/* <RenderCounter>
           {(count, incrementCount) => (
             <RenderClickCounter count={count} incrementCount={incrementCount} />
           )}
@@ -125,7 +128,15 @@ class App extends Component {
           {(count, incrementCount) => (
             <RenderHoverCounter count={count} incrementCount={incrementCount} />
           )}
-        </RenderCounter>
+        </RenderCounter> */}
+
+        {/* --------------------------- Context API ------------------------------ */}
+        {/* <UserProvider value="Testing Contexttttttttttt">
+          <ComponentC />
+        </UserProvider> */}
+
+        {/* --------------------- API ----------------------------------- */}
+        <Product />
       </div>
     );
   }
